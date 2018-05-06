@@ -4080,8 +4080,8 @@ Answer：
 Question：下列关于皖南事变的表述，正确的是（）。 ①它是国民党顽固派破坏抗战的行为②英美支持蒋介石发动皖南事变③中国共产党坚决回击顽固派的进攻④抗日民族统一战线由此完全破裂
 Answer：
  ①③④
-√ ①③
- ①②③
+ ①③
+√ ①②③
  ②③
 
 【习题11（单选题 ）】
@@ -6793,7 +6793,9 @@ function getAnwsers(idocument) {
 
         [].slice.call(anwsers).forEach(function(el) {
             var ansTextIndex = a.indexOf(el.innerText, qusTextIndex);
+            console.log(a[ansTextIndex]);
             if (a[ansTextIndex - 1] === '√') {
+
                 $(el.getElementsByTagName('input')[0]).trigger('click');
             }
         })
